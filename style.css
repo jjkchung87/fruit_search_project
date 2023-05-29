@@ -2,20 +2,17 @@
   box-sizing: border-box;
 }
 
-:focus {
- /* TODO */
-}
-
 html, body {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 body {
-  background: linear-gradient(to right, yellow, orange);
+  background: linear-gradient(94deg, #e9f40d 10%, #ff6600 90%);
 }
 
 .search-container {
@@ -42,7 +39,16 @@ ul {
   background-color: hsla(39, 92%, 70%, 0.674);
   width: 200px;
   margin-top: 5px; /* Added to create space between search bar and drop-down list */
+  box-shadow: 1px 2px 5px rgba(0,0,0,0.2);
+  max-height: 200px;
+  overflow-y: scroll;
+
 }
+
+ul::-webkit-scrollbar {
+  display: none;
+}
+
 
 ul li {
   list-style-type: none;
@@ -52,10 +58,12 @@ ul li {
   flex-direction: row;
   white-space: nowrap; /* Prevent line breaks within the li */
   line-height: 40px;
+  border: none;
 
 
 }
 
 ul li:hover {
   background-color: orange;
+  cursor: pointer;
 }

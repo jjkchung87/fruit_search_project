@@ -33,9 +33,9 @@ function showSuggestions(results, inputVal) { //displays the Results array as li
 		suggestions.removeChild(suggestions.firstChild);
 	  }
 	
-	const limit = Math.min(results.length, 5)
+	// const limit = Math.min(results.length, 5)
 	
-	for (let i = 0; i < limit; i++) {
+	for (let i = 0; i < results.length; i++) {
 		const suggestion = document.createElement("li");
 		const result = results[i];
 		const index = result.toLowerCase().indexOf(inputVal.toLowerCase());
